@@ -1,5 +1,5 @@
 # batopedia
-An Angular test project with bat species
+An Angular test project with bat species<br>
 
 GUI:
 Header: Bat Photos, Bat Species, Authentication, Manage data 
