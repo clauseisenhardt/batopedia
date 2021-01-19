@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img
+      [src]="photo.imagePath"
+      alt="{{ photo.species }}"
+      class="img-responsive"
+      style="max-height: 300px;">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Name: {{ photo.species }}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    Location: {{ photo.location }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div
+      class="btn-group"
+      appDropdown>
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle">
+        Manage Photo <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a (click)="onAddToSpecies()" style="cursor: pointer;">To Species</a></li>
+        <li><a style="cursor: pointer;" (click)="onEditPhoto()">Edit Photo</a></li>
+        <li><a style="cursor: pointer;" (click)="onDeletePhoto()">Delete Photo</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let ingredient of photo.ingredients">
+        {{ ingredient.name }} - {{ ingredient.amount }}
+      </li>
+    </ul>
+  </div>
+</div> -->

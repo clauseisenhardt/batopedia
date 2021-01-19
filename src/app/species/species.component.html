@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-species-edit></app-species-edit>
+    <hr>
+    <ul class="list-group">
+      <a
+        class="list-group-item"
+        style="cursor: pointer"
+        *ngFor="let bat of (speciesList | async).speciesList; let i = index"
+        (click)="onEditItem(i)"
+      >
+        {{ bat.name }}: {{bat.description}} [{{ bat.imagePath }}]
+      </a>
+    </ul>
+  </div>
+</div>
