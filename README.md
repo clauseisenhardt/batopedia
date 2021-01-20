@@ -9,3 +9,10 @@ Authentication: Login/Logout <br>
 Manage data: Fetch and Store data on back-end <br>
 <br>
 Back-end: Authentication, Database and Hosting on firebase<br>
+<br>
+Deployed on: https://batopidia.web.app/<br>
+<br>
+Usage:<br>
+local devel and deploy: ng serve [--port <port number>]<br>
+<br>
+deploy: ./deploy.sh<br>
