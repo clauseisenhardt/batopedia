@@ -4,9 +4,9 @@ An Angular test project with bat species<br>
 GUI:<br>
 Header: Bat Photos, Bat Species, Authentication, Manage data <br>
 Bat Photos:<br>
-&#x09;List photos, <br>
-&#x09;Show details, <br>
-&#x09;Manage photos: new photo, update photo, delete photo, Send to Species <br>
+  List photos, <br>
+  Show details, <br>
+  Manage photos: new photo, update photo, delete photo, Send to Species <br>
 Bat Species: List species, Manage: Add, Update, Delete <br>
 Authentication: Login/Logout <br>
 Manage data: Fetch and Store data on back-end <br>
