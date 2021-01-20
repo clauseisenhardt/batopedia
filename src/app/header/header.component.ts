@@ -8,13 +8,18 @@ import * as AuthActions from '../auth/store/auth.actions';
 import * as PhotoActions from '../photos/store/photo.actions';
 import * as SpeciesActions from '../species/store/species.actions';
 
+declare function jsHello(parm1): any;
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
+  userEmail = '';
   private userSub: Subscription;
+  headerBarUrl = 'https://upload.wikimedia.org/wikipedia/commons/0/0d/Gro%C3%9Fes_Mausohr.jpg';
+  //headerBarUrl = 'https://upload.wikimedia.org/wikipedia/commons/3/33/Microchiroptera.JPG';
 
   constructor(
     private store: Store<fromApp.AppState>
@@ -24,14 +29,19 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    jsHello("noble one");
     this.userSub = this.store
       .select('auth')
       .pipe(map(authState => authState.user))
       .subscribe(user => {
-        this.isAuthenticated = !!user;
-        console.log(!user);
         console.log(!!user);
-      });
+        this.isAuthenticated = !!user;
+        if (this.isAuthenticated) {
+          this.userEmail = user.email;
+          console.log(user.email);
+        }
+    });
+    console.log('HeaderComponent:ngOnInit isAuthenticated: ' + this.isAuthenticated);
   }
 
   onSaveData() {
@@ -48,6 +58,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   onLogout() {
     this.store.dispatch(new AuthActions.Logout());
+    this.userEmail = '';
   }
 
   ngOnDestroy() {

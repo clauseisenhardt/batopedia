@@ -25,13 +25,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-An Angular test project with bat species<br>
-<br>
-GUI:<br>
-Header: Bat Photos, Bat Species, Authentication, Manage data <br>
-Bat Photos: List photos, show details, manage photos: new photo, update photo, delete photo, Send to Species <br>
-Bat Species: List species, Manage: Add, Update, Delete <br>
-Authentication: Login/Logout <br>
-Manage data: Fetch and Store data on back-end <br>
-<br>
-Back-end: Authentication, Database and Hosting on firebase<br>

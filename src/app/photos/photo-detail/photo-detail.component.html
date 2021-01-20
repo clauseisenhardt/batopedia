@@ -1,3 +1,6 @@
+<!-- <script src='../../../assets/js/SimpleImage.js'></script> -->
+
+<hr>
 <div class="row">
   <div class="col-xs-12">
     <img
@@ -28,22 +31,35 @@
         Manage Photo <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a (click)="onAddToSpecies()" style="cursor: pointer;">To Species</a></li>
+        <li><a style="cursor: pointer;" (click)="onAddToSpecies()">To Species</a></li>
         <li><a style="cursor: pointer;" (click)="onEditPhoto()">Edit Photo</a></li>
         <li><a style="cursor: pointer;" (click)="onDeletePhoto()">Delete Photo</a></li>
+        <li><a style="cursor: pointer;" (click)="onLoadPhoto()">Load Photo</a></li>
+        <li><a style="cursor: pointer;" (click)="onConvertePhoto()">Converte Photo</a></li>
       </ul>
     </div>
   </div>
 </div>
-
-<!-- <div class="row">
-  <div class="col-xs-12">
-    <ul class="list-group">
-      <li
-        class="list-group-item"
-        *ngFor="let ingredient of photo.ingredients">
-        {{ ingredient.name }} - {{ ingredient.amount }}
-      </li>
-    </ul>
+<div class="row" *ngIf="photoConverterActive">
+  <hr>
+  <div class="col-xs-6">
+    <a>Loaded Image</a>
+    <img
+      [src]="localImage"
+      alt="{{ photo.species }}"
+      *ngIf="!isImageLoading;"
+      class="img-responsive"
+      style="max-width: 250px;">
   </div>
-</div> -->
+  <div class="col-xs-6">
+      <a>Converted Image</a>
+      <img
+      [src]="convertedImage"
+      alt="{{ photo.species }}"
+      *ngIf="!isImageLoading;"
+      class="img-responsive"
+      style="max-width: 250px;">
+  </div>
+  <hr>
+  <!-- <canvas id="ConvImageCanv" width="50px"></canvas> -->
+</div>
