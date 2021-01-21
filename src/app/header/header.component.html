@@ -23,6 +23,7 @@
           <a routerLink="/species">Bat Species</a>
         </li>
       </ul>
+
       <ul class="nav navbar-nav navbar-right">
         <li *ngIf="isAuthenticated">
           <a style="cursor: pointer;" (click)="onLogout()">Logout: {{ userEmail }}</a>
@@ -38,6 +39,25 @@
             <li>
               <a style="cursor: pointer;" (click)="onFetchData()">Fetch Data</a>
             </li>
+          </ul>
+        </li>
+        <li class="dropdown" appDropdown>
+          <a style="cursor: pointer;" class="dropdown-toggle" role="button">
+            About
+          </a>
+          <ul class="dropdown-menu">
+            <a class="col-lg-12">An Angular test project with bat species<br>
+              <br>
+              GUI:<br>
+              Header: Bat Photos, Bat Species, Authentication, Manage data <br>
+              Bat Photos: List photos, show details, manage photos: new photo, update photo, delete photo, Send to Species <br>
+              Bat Species: List species, Manage: Add, Update, Delete <br>
+              Authentication: Login/Logout <br>
+              Manage data: Fetch and Store data on back-end <br>
+              <br>
+              Back-end: Authentication, Database and Hosting on firebase<br>
+              <br>
+            </a>
           </ul>
         </li>
       </ul>
