@@ -1,15 +1,27 @@
 <div class="row">
-  <div class="col-xs-10">
+  <div class="col-xs-12">
     <app-species-edit></app-species-edit>
     <hr>
     <ul class="list-group">
       <a
-        class="list-group-item"
+        class="list-group-item clearfix"
         style="cursor: pointer"
         *ngFor="let bat of (speciesList | async).speciesList; let i = index"
         (click)="onEditItem(i)"
       >
-        {{ bat.name }}: {{bat.description}} [{{ bat.imagePath }}]
+        <span class="col-xs-10">
+          <div><h4>{{ bat.name }}</h4></div>
+          <div>{{bat.description}}</div>
+          <div>[{{ bat.imagePath }}]</div>
+        </span>
+        <span class="pull-right" class="col-xs-2">
+        <div><img
+            [src]="bat.imagePath"
+            alt="{{ bat.name }}"
+            class="img-responsive"
+            style="max-height: 100px;"></div>
+        </span>
+
       </a>
     </ul>
   </div>
