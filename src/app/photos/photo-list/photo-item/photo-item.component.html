@@ -3,15 +3,20 @@
   [routerLink]="[index]"
   routerLinkActive="active"
   class="list-group-item clearfix">
-  <span class="pull-left">
+  <div class="col-xs-8">
+      <span class="pull-left">
+
     <h4 class="list-group-item-heading">{{ photo.species }}</h4>
     <p class="list-group-item-text">Location: {{ photo.location }}</p>
+
   </span>
+</div>
+<div class="col-xs-4">
   <span class="pull-right">
     <img
       [src]="photo.imagePath"
       alt="{{ photo.species }}"
       class="img-responsive"
       style="max-height: 50px;">
-  </span>
+  </span></div>
 </a>

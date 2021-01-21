@@ -17,7 +17,11 @@ const initialState: State = {
     'https://upload.wikimedia.org/wikipedia/commons/2/2f/Myotis_daubentoni.jpg'),
     new Photo('Vandflagermus',
     'Aalborg',
-    'https://upload.wikimedia.org/wikipedia/commons/e/e8/XN_Myotis_daubentonii_157.jpg')
+    'https://upload.wikimedia.org/wikipedia/commons/e/e8/XN_Myotis_daubentonii_157.jpg'),
+    new Photo('Flying fox',
+    // Flying fox flying off tree at the Royal Botanic Gardens, Sydney, Australia. Shot taken in 26/5/2007 by Daniel Vianna.
+    'Botanical Gardens, Sydney, Australia',
+    'https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/Flying_bat_with_tree_crop.JPG/800px-Flying_bat_with_tree_crop.JPG')
   ]
 };
 
